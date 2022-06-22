@@ -60,18 +60,48 @@ let favoriteBookKatya2 = {
     title: "Brosers Karamaz",
     numberOfPages: 840,
     language: "Russian",
-    __proto__: favoriteBookRoma2,
 };
+
+Object.setPrototypeOf(favoriteBookKatya2, favoriteBookRoma2)
 
 let favoriteBookLena2 = {
     title: "Player",
     numberOfPages: 416,
-    __proto__: favoriteBookKatya2,
 }
 
-console.log(favoriteBookKatya2);
+Object.setPrototypeOf(favoriteBookLena2, favoriteBookKatya2)
+
 console.log(favoriteBookRoma2);
+console.log(favoriteBookKatya2);
 console.log(favoriteBookLena2);
+
+//3 var
+
+let favoriteBookRoma3 = {
+    author: "Orwell G.",
+    title: "Animal Farm: A Fairy Story",
+    numberOfPages: 84,
+    publishingHouse: "АСТ",
+    language: "English",
+}
+
+let favoriteBookKatya3 = {
+    author: "Dostoevsky F.M.",
+    title: "Brosers Karamaz",
+    numberOfPages: 840,
+    language: "Russian",
+    __proto__: favoriteBookRoma3,
+};
+
+let favoriteBookLena3 = {
+    title: "Player",
+    numberOfPages: 416,
+    __proto__: favoriteBookKatya3,
+}
+
+console.log(favoriteBookRoma3);
+console.log(favoriteBookKatya3);
+console.log(favoriteBookLena3);
 
 
 // 3)
